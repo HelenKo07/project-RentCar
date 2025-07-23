@@ -1,7 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { lazy, Suspense } from "react";
-import './App.css'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
 import Layout from './components/Layout/Layout.jsx';
 
