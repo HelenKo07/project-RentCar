@@ -1,11 +1,47 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import './styles/reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Manrope:wght@200..800&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+:root {
+  /* font */
+  --font-family: 'Inter', sans-serif;
+  --font-size-base: 16px;
+
+  --regular-font-weight: 400;
+  --semibold-font-weight: 600;
+
+  /* font */
+  --main-font-family: 'Manrope', sans-serif;
+  --font-size-base: 16px;
+
+  --regular-font-weight: 400;
+  --medium-font-weight: 500;
+  --semibold-font-weight: 600;
+  --bold-font-weight: 700;
+
+  /* color */
+  --black: #000000;
+  --white: #ffffff;
+  --dark-brown: #3d2218;
+  --brown: #6d554b;
+  --light-brown: #9b6c43;
+  --gray: #595d62;
+  --light-grey: #9f9f9f;
+  --red: #c80000;
+  --background: #fbfcf8;
+  --light-beige: #faf3e0;
+  --accent-hover: #c58447;
+
+  --background-gradient: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.3) 100%);
+
+  /* responsiveness */
+  --pre-mobile: 392.98px;
+  --mobile: 393px;
+  --pre-tablet: 767.98px;
+  --tablet: 768px;
+  --pre-desktop: 1439.98px;
+  --desktop: 1440px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,56 +49,41 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
+  height: 100%;
+  font-family: var(--main-font-family);
+  color: var(--black);
+  font-size: var(--font-size-base);
+  font-style: normal;
+  font-weight: var(--regular-font-weight);
+  line-height: 25px;
+  background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 0 108px;
+  }
+}
+
+.section {
+  padding: 48px 0;
+  flex: 1;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  flex-direction: column;
 }
