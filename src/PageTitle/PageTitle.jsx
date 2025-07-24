@@ -1,4 +1,4 @@
-import ViewCatalogButton from '../components/Button/ViewButton.jsx';
+import ViewCatalogButton from '../components/Button/ViewButton/ViewButton.jsx';
 import css from './PageTitle.module.css';
 
 export default function PageTitle() {

@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background-color: var(--white);
+  border: 1px solid var(--light-white-grey);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  width: 280px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.select,
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--light-gray);
+  border-radius: 12px;
+  font-size: 14px;
+  background-color: var(--light-white-grey);
+  color: var(--black);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.select:focus,
+.input:focus {
+  border-color: var(--light-blue);
+  background-color: var(--white);
+}
+
+.rangeWrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.resetButton {
+  margin-top: 8px;
+  background-color: transparent;
+  color: var(--light-blue);
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.resetButton:hover {
+  color: var(--dark-blue);
+}

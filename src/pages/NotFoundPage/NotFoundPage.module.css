@@ -9,5 +9,5 @@
 
 .notFoundText {
     font-size: 2rem;
-    color: #3470ff;
+    color: var(--light-blue);
 }

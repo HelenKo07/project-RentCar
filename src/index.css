@@ -19,17 +19,17 @@
   --bold-font-weight: 700;
 
   /* color */
-  --black: #000000;
+  --black: #101828;
+  --light-blue: #3470FF;
+  --dark-blue: #0B44CD;
   --white: #ffffff;
-  --dark-brown: #3d2218;
-  --brown: #6d554b;
-  --light-brown: #9b6c43;
-  --gray: #595d62;
-  --light-grey: #9f9f9f;
-  --red: #c80000;
-  --background: #fbfcf8;
-  --light-beige: #faf3e0;
-  --accent-hover: #c58447;
+  --white-grey: #F2F4F7;
+  --light-white-grey: #F7F7FB;
+  --light-gray: #DADDE1;
+  --dark-grey: #8E929A;
+  
+  
+  
 
   --background-gradient: linear-gradient(90deg,
       rgba(0, 0, 0, 0.9) 0%,

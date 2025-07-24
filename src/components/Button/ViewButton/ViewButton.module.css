@@ -1,21 +1,21 @@
 .button {
-   display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 0px;
   border-radius: 12px;
   padding: 12px 99px;
-  background: #3470ff;
+  background: var(--light-blue);
 
   font-family: var(--main-font-family);
   font-weight: var(--semibold-font-weight);
   font-size: 16px;
   line-height: 1.25;
-  color: #fff;
+  color: var(--white);
   transition: background-color 0.3s;
 }
 
 .button:hover {
-  background-color: #0b44cd;
+  background-color: var(--dark-blue);
 }
