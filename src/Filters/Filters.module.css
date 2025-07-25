@@ -1,58 +1,87 @@
-.container {
+.filtersWrapper {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 24px;
-  background-color: var(--white);
-  border: 1px solid var(--light-white-grey);
+  gap: 24px;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  font-family: "Manrope", sans-serif;
+  color: #101828;
+}
+
+.select,
+.input {
+  margin-top: 8px;
+  padding: 12px 14px;
+  border: 1px solid #cfd3d8;
   border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  width: 280px;
+  font-size: 16px;
+  font-family: inherit;
+  color: #101828;
+  min-width: 160px;
 }
 
 .label {
   font-size: 14px;
   font-weight: 500;
-  color: var(--black);
-  margin-bottom: 8px;
+  color: #121417;
 }
 
-.select,
-.input {
-  width: 100%;
-  padding: 10px 14px;
-  border: 1px solid var(--light-gray);
-  border-radius: 12px;
-  font-size: 14px;
-  background-color: var(--light-white-grey);
-  color: var(--black);
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-
-.select:focus,
-.input:focus {
-  border-color: var(--light-blue);
-  background-color: var(--white);
-}
-
-.rangeWrapper {
+.mileageInputs {
   display: flex;
-  gap: 12px;
+  border: 1px solid #f7f7fb;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #f7f7fb;
+}
+
+.inputLeft,
+.inputRight {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #121417;
+}
+
+.inputLeft {
+  border-right: 1px solid #8a8a89;
+}
+
+.inputRight {
+  border-left: 1px solid transparent;
+}
+
+
+.button {
+  padding: 14px 44px;
+  background-color: #3470FF;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0b44cd;
 }
 
 .resetButton {
-  margin-top: 8px;
+  padding: 14px 20px;
   background-color: transparent;
-  color: var(--light-blue);
-  border: none;
-  font-size: 14px;
+  color: #3470FF;
+  font-weight: 500;
+  border: 1px solid #3470FF;
+  border-radius: 12px;
   cursor: pointer;
-  padding: 0;
-  text-align: left;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .resetButton:hover {
-  color: var(--dark-blue);
+  background-color: #f0f4ff;
 }

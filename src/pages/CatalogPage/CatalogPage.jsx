@@ -28,21 +28,23 @@ export default function CatalogPage () {
     <>
     <Navigation />
     <div className={css.wrapper}>
-      <aside className={css.sidebar}>
+      <aside className={css.asideBar}>
         <Filters />
-      </aside>
-
-      <main className={css.catalog}>
+        </aside>
+        {isLoading ? (
+        <Loader />
+      ) : items.length === 0 ? (
+        <p>Nothing found matching your request</p>
+      ) : (
         <div>
-        {items.map(car => (
-          <CarCard key={car.id} car={car} />
-        ))}
+          {items.map(car => (
+            <CarCard key={car.id} car={car} />
+          ))}
         </div>
-        {isLoading && <Loader />}
+      )}
         {hasMore && (
-          <button onClick={() => dispatch(incrementPage())}>Read more</button>
+          <button onClick={() => dispatch(incrementPage())}>Load more</button>
         )}
-      </main>
     </div>
     </>
   );

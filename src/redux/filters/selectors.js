@@ -1,2 +1,3 @@
 export const selectFilters = (state) => state.filters;
-export const selectFilterByName = (name) => (state) => state.filters[name];
+export const selectBrands = (state) => state.filters.brands;
+export const selectFiltersLoading = (state) => state.filters.isLoading;

@@ -11,9 +11,9 @@
 
 ## 📸 Демо
 
-[![Demo Screenshot](<./src/assets/Demo%20Screenshot(1).png>)]
-[![Demo Screenshot](<./src/assets/Demo%20Screenshot(2).png>)]
-[![Demo Screenshot](<./src/assets/Demo%20Screenshot(3).png>)]
+[![Demo Screenshot](<./src/assets/forReadme/Demo Screenshot(1).png>)]
+[![Demo Screenshot](<./src/assets/forReadme/Demo Screenshot(2).png>)]
+[![Demo Screenshot](<./src/assets/forReadme/Demo Screenshot(3).png>)]
 
 ---
 
