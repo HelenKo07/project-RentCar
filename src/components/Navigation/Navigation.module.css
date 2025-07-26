@@ -10,6 +10,11 @@
   z-index: 1000;
 }
 
+.scrolled {
+  background-color: rgba(222, 222, 231, 0.8);
+  backdrop-filter: blur(10px);
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;

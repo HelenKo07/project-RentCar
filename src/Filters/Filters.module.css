@@ -1,62 +1,76 @@
 .filtersWrapper {
   display: flex;
-  gap: 24px;
-  align-items: flex-end;
-  margin-bottom: 40px;
-  font-family: "Manrope", sans-serif;
-  color: #101828;
-}
-
-.select,
-.input {
-  margin-top: 8px;
-  padding: 12px 14px;
-  border: 1px solid #cfd3d8;
-  border-radius: 14px;
-  font-size: 16px;
-  font-family: inherit;
-  color: #101828;
-  min-width: 160px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  gap: 16px;
+  padding-right: 16px;
 }
 
 .label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #121417;
+  font-family: var(--main-font-family);
+  font-weight: var(--regular-font-weight);
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--grey);
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 12px;
+  margin-top: 8px;
+  padding: 12px 64px 12px 16px;
+  border: none;
+  background: var(--ligt-white);
+  font-family: var(--main-font-family);
+  font-weight: var(--medium-font-weight);
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--black);
 }
 
 .mileageInputs {
-  display: flex;
-  border: 1px solid #f7f7fb;
-  border-radius: 14px;
-  overflow: hidden;
-  background-color: #f7f7fb;
+  margin-top: 8px;
+  border-radius: 12px;
+  background-color: var(--ligt-white);
 }
 
 .inputLeft,
 .inputRight {
-  flex: 1;
-  padding: 14px 18px;
-  font-size: 18px;
-  font-weight: 500;
+  padding: 17px 24px;
   border: none;
   outline: none;
   background-color: transparent;
-  color: #121417;
 }
 
 .inputLeft {
-  border-right: 1px solid #8a8a89;
+  border-right: 1px solid #dadde1;
 }
 
-.inputRight {
-  border-left: 1px solid transparent;
+.inputLeft::placeholder,
+.inputRight::placeholder {
+  color: var(--black);
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
 }
 
+.inputRight::placeholder {
+  border-right: none;
+}
 
-.button {
-  padding: 14px 44px;
-  background-color: #3470FF;
+.buttonSearch {
+  display: flex;
+  gap: 12px;
+  margin-top: 23px;
+  padding: 14px 51px;
+  background-color: #3470ff;
   color: #fff;
   font-weight: 600;
   font-size: 16px;
@@ -67,21 +81,23 @@
   transition: background-color 0.3s ease;
 }
 
-.button:hover {
+.buttonSearch:hover {
   background-color: #0b44cd;
 }
 
 .resetButton {
-  padding: 14px 20px;
+  display: flex;
+  margin-top: 23px;
+  padding: 15px 20px;
   background-color: transparent;
-  color: #3470FF;
+  color: var(--white);
   font-weight: 500;
-  border: 1px solid #3470FF;
   border-radius: 12px;
   cursor: pointer;
+  background-color: #3470ff;
   transition: all 0.3s ease;
 }
 
 .resetButton:hover {
-  background-color: #f0f4ff;
+  background-color: #0b44cd;
 }

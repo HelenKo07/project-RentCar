@@ -72,7 +72,7 @@ export default function Filters() {
           value={filters.price || ""}
           onChange={(e) => dispatch(setFilterPrice(Number(e.target.value)))}
         >
-          <option value="">Choose a price</option>
+          <option value="" className={css.option}>Choose a price</option>
           {priceOptions.map(price => (
             <option key={price} value={price}>
               {price}
@@ -86,7 +86,6 @@ export default function Filters() {
         <div className={css.mileageInputs}>
           <input
             className={css.inputLeft}
-            name="mileageFrom"
             type="text"
             inputMode="numeric"
             pattern="[0-9]*"
@@ -96,7 +95,6 @@ export default function Filters() {
           />
           <input
             className={css.inputRight}
-            name="mileageTo"
             type="text"
             inputMode="numeric"
             pattern="[0-9]*"
@@ -107,8 +105,8 @@ export default function Filters() {
         </div>
       </label>
 
-      <button onClick={handleSearch}>Search</button>
-      <button onClick={() => dispatch(resetFilters())}>Reset</button>
+      <button className={css.buttonSearch} onClick={handleSearch}>Search</button>
+      <button className={css.resetButton} onClick={() => dispatch(resetFilters())}>Reset</button>
     </div>
   );
 }
