@@ -20,8 +20,8 @@ export default function CarDetailsPage () {
   return (
     <div>
         <Navigation />
-      <h2>{car.make} {car.model}</h2>
-      <img src={car.img} alt={car.make} style={{ width: '400px' }} />
+      <h2>{car.brand} {car.model}</h2>
+      <img src={car.img} alt={car.brand} style={{ width: '400px' }} />
       <p>Year: {car.year}</p>
       <p>Price: {car.rentalPrice}</p>
     </div>
