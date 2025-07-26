@@ -6,7 +6,7 @@ export default function CarCard({ car }) {
   const {
     id,
     img,
-    make,
+    brand,
     model,
     year,
     rentalPrice,
@@ -15,24 +15,24 @@ export default function CarCard({ car }) {
     type,
   } = car;
 
-  const location = address.split(",").slice(1, 3).join(" • ");
+  const location = address.split(",").slice(1, 3).map(part => part.trim());
 
   return (
     <div className={css.card}>
       <div className={css.imgWrapper}>
-        <img src={img} alt={`${make} ${model}`} />
+        <img src={img} alt={`${brand} ${model}`} />
         <FavoriteButton carId={car.id} />
       </div>
       <div className={css.info}>
         <div className={css.title}>
           <span>
-            {make} {model}, {year}
+            {brand} <span className={css.model}>{model}</span>, {year}
           </span>
-          <span>{rentalPrice}</span>
+          <span>${rentalPrice}</span>
         </div>
 
         <p className={css.description}>
-          {location} • {rentalCompany} • {type} • ID: {id}
+          {location.join(" | ")} | {rentalCompany} | {type} | {car.mileage.toLocaleString()} km
         </p>
 
         <Link to={`/catalog/${id}`}>
