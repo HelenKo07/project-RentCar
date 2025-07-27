@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 import 'modern-normalize'
+import 'react-toastify/dist/ReactToastify.css';
 import { Provider } from 'react-redux'
 import { store } from './redux/store.js'
 

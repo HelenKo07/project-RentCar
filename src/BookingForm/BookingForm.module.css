@@ -1,0 +1,136 @@
+.formCard {
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+  padding: 32px;
+  width: 640px;
+  height: 488px;
+  background-color: var(--white);
+}
+
+.title {
+  font-weight: var(--semibold-font-weight);
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--black);
+}
+
+.text {
+  font-weight: var(--medium-font-weight);
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--grey);
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: none;
+  background-color: var(--light-white-grey);
+}
+
+.form textarea {
+  min-height: 80px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: var(--light-white-grey);
+}
+
+/* Контейнер обгортки */
+:global(.react-datepicker-wrapper) {
+  width: 100%;
+}
+
+/* Контейнер для input */
+:global(.react-datepicker__input-container) {
+  width: 100%;
+}
+
+/* Сам інпут від react-datepicker */
+:global(.react-datepicker__input-container input) {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: var(--light-white-grey);
+}
+
+:global(.react-datepicker) {
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+  background-color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+}
+
+/* Навігація (стрілки, місяці) */
+:global(.react-datepicker__header) {
+  background-color: #3470ff;
+  color: white;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+:global(.react-datepicker__current-month),
+:global(.react-datepicker-time__header),
+:global(.react-datepicker-year-header) {
+  color: white;
+  font-weight: 600;
+}
+
+/* Дні */
+:global(.react-datepicker__day) {
+  font-size: 14px;
+  color: var(--black);
+}
+
+/* Виділений день */
+:global(.react-datepicker__day--selected),
+:global(.react-datepicker__day--keyboard-selected) {
+  background-color: #3470ff;
+  color: white;
+  border-radius: 50%;
+}
+
+/* Ховер по дням */
+:global(.react-datepicker__day:hover) {
+  background-color: #255be7;
+  color: white;
+  border-radius: 50%;
+}
+
+.form button {
+  background-color: var(--light-blue);
+  color: white;
+  border: none;
+padding: 12px 51px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: var(-dark-blue);
+}
