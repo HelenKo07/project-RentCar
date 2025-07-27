@@ -1,9 +1,9 @@
 .formCard {
+  gap: 24px;
   border: 1px solid #dadde1;
   border-radius: 10px;
   padding: 32px;
-  width: 640px;
-  height: 488px;
+  width: 100%;
   background-color: var(--white);
 }
 
@@ -31,8 +31,7 @@
   gap: 24px;
 }
 
-.form input,
-.form textarea {
+.form input {
   width: 100%;
   padding: 12px 20px;
   font-size: 14px;
@@ -53,6 +52,16 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: var(--light-white-grey);
+}
+
+textarea {
+  border-radius: 12px;
+  padding: 12px 20px 56px 20px;
+  resize: none;
+  background-color: var(--light-white-grey);
+  font-size: 14px;
+  border: 1px solid #ccc;
+  width: 100%;
 }
 
 /* Контейнер обгортки */
@@ -124,7 +133,7 @@
   background-color: var(--light-blue);
   color: white;
   border: none;
-padding: 12px 51px;
+  padding: 12px 51px;
   border-radius: 12px;
   cursor: pointer;
   font-weight: 600;
