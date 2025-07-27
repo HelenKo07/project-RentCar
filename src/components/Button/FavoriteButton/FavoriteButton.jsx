@@ -8,7 +8,7 @@ import { selectFavorites } from "../../../redux/favorites/selectors.js";
 const FavoriteButton = ({ carId }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
-  const isFavorite = favorites.includes(String(carId))
+  const isFavorite = favorites.includes(String(carId));
 
   const handleClick = () => {
     dispatch(toggleFavorite(carId));

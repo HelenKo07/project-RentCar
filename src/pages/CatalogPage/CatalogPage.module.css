@@ -16,7 +16,7 @@
   display: block;
   margin: 40px auto 0;
   padding: 12px 44px;
-  background-color: #3470FF;
+  background-color: #3470ff;
   color: white;
   font-size: 14px;
   font-weight: 500;
@@ -27,7 +27,7 @@
 }
 
 .buttonLoad:hover {
-  background-color: #0B44CD;
+  background-color: #0b44cd;
 }
 
 .textNothing {

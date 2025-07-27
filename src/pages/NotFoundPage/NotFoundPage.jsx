@@ -7,11 +7,11 @@ export default function NotFoundPage() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/', {replace: true});
+      navigate("/", { replace: true });
     }, 3000);
     return () => clearTimeout(timer);
   }, [navigate]);
-  
+
   return (
     <div className={css.notFoundContainer}>
       <p className={css.notFoundText}>

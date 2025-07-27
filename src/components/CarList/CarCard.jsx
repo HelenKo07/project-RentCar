@@ -15,7 +15,10 @@ export default function CarCard({ car }) {
     type,
   } = car;
 
-  const location = address.split(",").slice(1, 3).map(part => part.trim());
+  const location = address
+    .split(",")
+    .slice(1, 3)
+    .map((part) => part.trim());
 
   return (
     <div className={css.card}>
@@ -32,7 +35,8 @@ export default function CarCard({ car }) {
         </div>
 
         <p className={css.description}>
-          {location.join(" | ")} | {rentalCompany} | {type} | {car.mileage.toLocaleString()} km
+          {location.join(" | ")} | {rentalCompany} | {type} |{" "}
+          {car.mileage.toLocaleString()} km
         </p>
 
         <Link to={`/catalog/${id}`}>

@@ -23,7 +23,7 @@ export default function CarDetailsPage() {
   }, [dispatch, id]);
 
   if (isLoading) return <Loader />;
-  if (!car) return <p>Car not found</p>;
+  if (!car) return <p className={css.error}>Car not found</p>;
 
   const shortId = car.id.match(/\d+/g)?.join("").slice(-4);
 
@@ -39,7 +39,7 @@ export default function CarDetailsPage() {
       <div className={css.detailsContainer}>
         <div className={css.leftColumn}>
           <img className={css.carImage} src={car.img} alt={car.brand} />
-          <BookingForm/>
+          <BookingForm />
         </div>
 
         <div className={css.rightColumn}>
@@ -51,10 +51,9 @@ export default function CarDetailsPage() {
           <div className={css.infoLine}>
             <GrLocation />
             <p className={css.locationText}>
-              {location}{" "}
+              {location}
               <span className={css.styleMileage}>
-                Mileage:
-                {car.mileage.toLocaleString()} km
+                Mileage: {car.mileage.toLocaleString()} km
               </span>
             </p>
           </div>
@@ -66,34 +65,36 @@ export default function CarDetailsPage() {
             <h3 className={css.subtitleConditions}>Rental Conditions:</h3>
             {car.rentalConditions?.map((condition, index) => (
               <div key={index} className={css.conditionItem}>
-                <FaRegCircleCheck />
-                <p className={css.conditionContent}>{condition}</p>
+                <FaRegCircleCheck className={css.icon} />
+                <p>{condition}</p>
               </div>
             ))}
           </div>
           <div className={css.section}>
             <h3 className={css.textSpecifications}>Car Specifications:</h3>
-            <ul>
-              <li>
-                <IoCalendarOutline />
+            <ul className={css.specList}>
+              <li className={css.inlineItem}>
+                <IoCalendarOutline className={css.icon} />
                 <p>Year: {car.year}</p>
               </li>
-              <li>
-                <BsCarFront />
+              <li className={css.inlineItem}>
+                <BsCarFront className={css.icon} />
                 <p>Type: {car.type}</p>
               </li>
-              <li>
-                <RiGasStationLine />
+              <li className={css.inlineItem}>
+                <RiGasStationLine className={css.icon} />
                 <p>Fuel Consumption: {car.fuelConsumption}</p>
               </li>
-              <li>
-                <FiSettings />
+              <li className={css.inlineItem}>
+                <FiSettings className={css.icon} />
                 <p>Engine Size: {car.engineSize}</p>
               </li>
             </ul>
           </div>
           <div className={css.section}>
-            <h3>Accessories and functionalities:</h3>
+            <h3 className={css.additionsText}>
+              Accessories and functionalities:
+            </h3>
             {[...(car.accessories || []), ...(car.functionalities || [])].map(
               (item, i) => (
                 <div key={i} className={css.additionsItem}>

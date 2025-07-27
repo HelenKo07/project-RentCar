@@ -72,8 +72,10 @@ export default function Filters() {
           value={filters.price || ""}
           onChange={(e) => dispatch(setFilterPrice(Number(e.target.value)))}
         >
-          <option value="" className={css.option}>Choose a price</option>
-          {priceOptions.map(price => (
+          <option value="" className={css.option}>
+            Choose a price
+          </option>
+          {priceOptions.map((price) => (
             <option key={price} value={price}>
               {price}
             </option>
@@ -91,7 +93,9 @@ export default function Filters() {
             pattern="[0-9]*"
             placeholder="From"
             value={filters.mileage.minMileage || ""}
-            onChange={(e) => dispatch(setFilterMileage({minMileage: e.target.value}))}
+            onChange={(e) =>
+              dispatch(setFilterMileage({ minMileage: e.target.value }))
+            }
           />
           <input
             className={css.inputRight}
@@ -100,13 +104,22 @@ export default function Filters() {
             pattern="[0-9]*"
             placeholder="To"
             value={filters.mileage.maxMileage || ""}
-            onChange={(e) => dispatch(setFilterMileage({maxMileage: e.target.value}))}
+            onChange={(e) =>
+              dispatch(setFilterMileage({ maxMileage: e.target.value }))
+            }
           />
         </div>
       </label>
 
-      <button className={css.buttonSearch} onClick={handleSearch}>Search</button>
-      <button className={css.resetButton} onClick={() => dispatch(resetFilters())}>Reset</button>
+      <button className={css.buttonSearch} onClick={handleSearch}>
+        Search
+      </button>
+      <button
+        className={css.resetButton}
+        onClick={() => dispatch(resetFilters())}
+      >
+        Reset
+      </button>
     </div>
   );
 }
